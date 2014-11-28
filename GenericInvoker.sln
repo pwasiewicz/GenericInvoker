@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericInvoker", "GenericInvoker\GenericInvoker.csproj", "{B6AB3A85-55FB-4466-9783-B30720C41453}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{219F1FA0-6DF3-4730-A1BB-6E970696F563}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericInvoker.Tests", "GenericInvoker.Tests\GenericInvoker.Tests.csproj", "{1A139317-39E7-4A05-8C5B-228F38A2470D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6AB3A85-55FB-4466-9783-B30720C41453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6AB3A85-55FB-4466-9783-B30720C41453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6AB3A85-55FB-4466-9783-B30720C41453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6AB3A85-55FB-4466-9783-B30720C41453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A139317-39E7-4A05-8C5B-228F38A2470D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A139317-39E7-4A05-8C5B-228F38A2470D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A139317-39E7-4A05-8C5B-228F38A2470D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A139317-39E7-4A05-8C5B-228F38A2470D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1A139317-39E7-4A05-8C5B-228F38A2470D} = {219F1FA0-6DF3-4730-A1BB-6E970696F563}
+	EndGlobalSection
+EndGlobal

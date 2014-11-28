@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>GenericInvoker</title>
+    <authors>pwasiewicz</authors>
+    <owners>pwasiewicz</owners>
+    <licenseUrl>https://genericinvoker.codeplex.com/license</licenseUrl>
+    <projectUrl>https://genericinvoker.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>GenericInvoker is small PortableClassLibrary that allows you to invoke the specified action when object is of particular type.</description>
+    <releaseNotes>First, initial GenericInvoker.</releaseNotes>
+    <copyright>Copyright 2014 pwasiewicz</copyright>
+    <tags>GenericInvoker invoking invoker generic</tags>
+  </metadata>
+</package>
