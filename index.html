@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>GenericInvoker by pwasiewicz</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>GenericInvoker</h1>
+        <p>Small library that allows you to invoke the specified action when object is of particular type.</p>
+        <p class="view"><a href="https://github.com/pwasiewicz/GenericInvoker">View the Project on GitHub <small>pwasiewicz/GenericInvoker</small></a></p>
+        <ul>
+          <li><a href="https://github.com/pwasiewicz/GenericInvoker/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/pwasiewicz/GenericInvoker/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/pwasiewicz/GenericInvoker">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="genericinvoker" class="anchor" href="#genericinvoker" aria-hidden="true"><span class="octicon octicon-link"></span></a>GenericInvoker</h1>
+
+<p>GenericInvoker is small PortableClassLibrary that allows you to invoke the specified action when object is of particular type.</p>
+
+<p>Available via <a href="https://www.nuget.org/packages/GenericInvoker/">nuget</a>.</p>
+
+<h1>
+<a id="background" class="anchor" href="#background" aria-hidden="true"><span class="octicon octicon-link"></span></a>Background</h1>
+
+<p>There are some question on <a href="http://stackoverflow.com">Stackoverflow</a>, where authors ask how to handle case, when we have object and take specified steps only when the object is of concrete, hardcoded type. There are some solutions proposed:</p>
+
+<div class="highlight highlight-c#"><pre><span class="pl-st">object</span> obj = GetObject();
+<span class="pl-k">if</span> (obj <span class="pl-k">is</span> MyClass)
+{
+  <span class="pl-k">var</span> casted = obj <span class="pl-k">as</span> MyClass;
+  <span class="pl-c">// actions</span>
+}
+
+<span class="pl-k">if</span> (obj <span class="pl-k">is</span> OtherClass)
+{
+  <span class="pl-k">var</span> casted = obj <span class="pl-k">as</span> OtherClass;
+  <span class="pl-c">// actions</span>
+}
+
+<span class="pl-c">// and so on</span></pre></div>
+
+<p>or:</p>
+
+<div class="highlight highlight-c#"><pre><span class="pl-st">void</span> MyAction(MyClass <span class="pl-st">class</span>)
+{
+}
+
+<span class="pl-st">void</span> MyAction(OtherClass)
+{
+}
+
+<span class="pl-st">object</span> obj = GetObject();
+MyAction((dynamic)obj);</pre></div>
+
+<p><strong>GenericInvoker</strong> combines both solution with Fluent API:</p>
+
+<div class="highlight highlight-c#"><pre><span class="pl-k">using</span> GenericInvoker;
+
+<span class="pl-c">//...</span>
+
+<span class="pl-st">object</span> obj = GetObject();
+obj.DetermineType().When((MyClass target) =&gt; { <span class="pl-c">/* action */</span> })
+                   .When((OtherClass target) =&gt; { <span class="pl-c">/* action */</span> })
+                   .Resolve();</pre></div>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/pwasiewicz">pwasiewicz</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
